@@ -1,15 +1,95 @@
+@use 'variaveis';
+
 .hero {
-    padding: 5.6vw;
-    min-height: 80vh;
+    padding: 2vw;
+    min-height: 100vh;
     background-image: url(../images/hero_desktop.jpeg);
     text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+}
 
-    &__content {
-        max-width: 640px;
 
-        &__branding {
-            max-width: 320px;
-            margin: 0 auto;
-        }
+.hero__content {
+    max-width: 640px;
+}
+
+.hero__content__branding {
+    max-width: 250px;
+    margin: 0 auto 24px;
+}
+
+.title--small {
+    margin-bottom: 40px;
+    font-size: 16px; 
+    font-weight: bold;
+}
+
+
+.hero__content p {
+    margin-bottom: 12px;
+    font-size: 18px; /* Ajuste para um tamanho de texto mais legível */
+    line-height: 0; /* Melhor espaçamento entre linhas */
+}
+
+.hero__content p:last-child {
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+/* Estilo para os combos e botões */
+.hero__content__combos {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px; /* Adiciona um pequeno espaçamento entre os combos */
+}
+
+.hero__content__combos__combo {
+    width: calc(50% - 8px); /* Ajusta a largura dos combos */
+}
+
+.hero__content__combos__combo img {
+    max-height: 55px;
+    width: auto;
+}
+
+.hero__content__combos__combo button {
+    display: block;
+    width: 250px;
+    height: 45px;
+    font-size: 16px;
+    color: #fff; /* Usar uma cor mais clara para o texto */
+    background-color: #6421ff;
+    text-transform: uppercase;
+    border-radius: 2px;
+    margin-top: 2vw; /* Ajuste de margem para melhorar o espaçamento */
+    padding: 12px; /* Ajuste de padding para melhorar o clique do botão */
+    border: none; /* Remover borda */
+    cursor: pointer; /* Deixa o cursor mais amigável */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para o fundo */
+}
+
+.hero__content__combos__combo button:hover {
+    background-color: #5201cc; /* Cor do botão ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px; /* Ajusta o padding em telas menores */
+    }
+
+    .hero__content {
+        max-width: 100%;
+    }
+
+    .hero__content__combos__combo {
+        width: 100%; /* Ajusta os combos para 100% da largura em telas menores */
+    }
+
+    .hero__content__combos {
+        flex-direction: column; /* Alinha os combos em coluna em telas menores */
     }
 }
