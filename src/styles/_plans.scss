@@ -1,0 +1,47 @@
+.plans {
+    padding: 5.6vw;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    transform-origin: top center;
+    margin-top: 100px;
+}
+
+.plans h2 {
+    text-align: center;
+    overflow: hidden;
+}
+
+.plans__list {
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    width: 100%;
+    margin-top: 50px;
+}
+
+.plans__list__item {
+    text-align: center;
+    padding: 60px 44px 44px;
+    max-width: 380px;
+    width: auto; /* Ajusta a largura dos itens */
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura total */
+}
+
+.plans__list__item:nth-child(2) {
+    background-image: url(../images/fundo_combo_plus.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.plans__list__item img {
+    height: 83px;
+}
+
+.plans__list__item strong {
+    display: block;
+    margin-top: 24px;
+}
+
+.plans p {
+    text-align: center;
+}
